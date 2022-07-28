@@ -7,11 +7,20 @@
 		padding-top: 120px;
 		padding-bottom: 50px;
 	}
+	@media (max-width: 768px) {
+		margin-top: -135px;
+	}
+	@media (max-width: 480px) {
+		margin-top: -125px;
+	}
 	&__body {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
 		margin-left: 112px;
+		@media (max-width: 1000px) {
+			margin-left: 60px;
+		}
 	}
 
 	&__title {
@@ -21,10 +30,22 @@
 		line-height: calc(95px / 72px * 100%);
 		color: #001e64;
 		max-width: 589px;
+		position: relative;
+		z-index: 2;
+		@media (max-width: 1440px) {
+			font-size: 52px;
+		}
+		@media (max-width: 768px) {
+			margin-left: -60px;
+			margin-top: 25px;
+		}
+		@media (max-width: 480px) {
+			font-size: 36px;
+		}
 		& + * {
 			margin-top: 184px;
 			@media (max-height: 900px) {
-				margin-top: 60px;
+				margin-top: 70px;
 			}
 		}
 	}
@@ -52,11 +73,29 @@
 		text-transform: uppercase;
 		color: #fff;
 		padding: 14px;
+		transition: all 0.3s;
+		@media (max-width: 768px) {
+			background: #001e64;
+			min-width: unset;
+			width: 100%;
+		}
+		&:hover {
+			background: #fff;
+			color: #001e64;
+			@media (max-width: 768px) {
+				background: #232222;
+				color: #fff;
+			}
+		}
 	}
 
 	&__lang {
 		display: flex;
 		justify-content: flex-end;
+		@media (max-width: 768px) {
+			justify-content: flex-start;
+			margin-left: -60px;
+		}
 	}
 
 	&__image {
@@ -69,12 +108,29 @@
 		img {
 			object-position: top;
 		}
+		@media (max-width: 768px) {
+			position: relative;
+			z-index: 1;
+			height: 300px;
+		}
+		@media (max-width: 480px) {
+			height: 250px;
+		}
+		@media (max-width: 320px) {
+			height: 200px;
+		}
 	}
 }
 .first-slider {
 	max-width: 407px;
+	@media (max-width: 768px) {
+		max-width: 100%;
+	}
 	& + * {
 		margin-top: 40px;
+		@media (max-width: 768px) {
+			margin-top: 25px;
+		}
 	}
 	&__item {
 	}
@@ -82,8 +138,15 @@
 	&__text {
 		font-size: 18px;
 		color: #fff;
+		@media (max-width: 768px) {
+			color: #232222;
+			font-size: 1rem;
+		}
 		& + * {
 			margin-top: 40px;
+			@media (max-width: 768px) {
+				margin-top: 15px;
+			}
 		}
 	}
 	& .slick-prev,
@@ -91,12 +154,23 @@
 		position: absolute;
 		left: -45px;
 		cursor: pointer;
+		opacity: 0.6;
+		transition: all 0.3s;
+		&:hover {
+			opacity: 1;
+		}
 	}
 	& > .slick-prev {
 		top: -54px;
+		@media (max-width: 768px) {
+			top: -40px;
+		}
 	}
 	& > .slick-next {
 		bottom: -150px;
+		@media (max-width: 768px) {
+			bottom: -100px;
+		}
 	}
 	& > .slick-dots {
 		position: absolute;
@@ -107,14 +181,30 @@
 		flex-direction: column;
 		justify-content: space-between;
 
+		@media (max-width: 768px) {
+			bottom: -60px;
+		}
+
 		button {
 			font-size: 24px;
 			line-height: 28px;
 			color: #fff;
 			opacity: 0.5;
+			@media (max-width: 768px) {
+				color: #232222;
+			}
+			transition: all 0.3s;
+			&:hover {
+				opacity: 1;
+			}
 			&::before {
 				content: "0";
 			}
+		}
+
+		& li:nth-child(n + 10) button::before {
+			//! чтобы у слайда с 10 номера небыло 0 перед цифрой в буллете
+			content: "";
 		}
 		& > .slick-active {
 			button {
@@ -132,6 +222,9 @@
 		text-transform: uppercase;
 		font-size: 18px;
 		line-height: calc(21px / 18px * 100%);
+		@media (max-width: 768px) {
+			color: #232222;
+		}
 		& .active {
 			font-weight: 700;
 		}
