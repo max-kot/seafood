@@ -9,6 +9,8 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<!-- Reset Styles -->
 	<link rel="stylesheet" href="css/reset.css">
+	<!-- Slick Styles -->
+	<link rel="stylesheet" href="css/slick.css">
 	<!-- Main style-->
 	<link rel="stylesheet" href="css/style.css">
 	<!-- Icon
@@ -55,15 +57,25 @@
 								fill="#001E64" />
 						</svg>
 					</a>
+					<button class="burger-btn">
+						<span></span>
+					</button>
 				</div>
 			</div>
 		</header>
 		<main class="main">
 			<section class="first">
+
+				<div class="first__image --ibg">
+					<img src="img/first/cover.jpg" alt="Морепродукты 
+						из Норвегии">
+				</div>
 				<div class="container">
 					<div class="first__body">
-						<h1 class="first__title">Морепродукты
-							из Норвегии</h1>
+						<h1 class="first__title">
+							Морепродукты из Норвегии
+						</h1>
+						<!-- SWIPER -->
 						<ul class="first__slider first-slider">
 							<li class="first-slider__item">
 								<p class="first-slider__text">
@@ -74,29 +86,58 @@
 									Ежедневно во всем мире подают несколько миллионов норвежских блюд из морепродуктов.
 								</p>
 							</li>
+							<li class="first-slider__item">
+								<p class="first-slider__text">
+									Ежедневно во всем мире подают несколько миллионов норвежских блюд из морепродуктов.
+								</p>
+								<p class="first-slider__text">
+									Норвежские морепродукты уникальны, потому что они выращиваются экологически рациональным образом,
+									основываясь на знаниях и опыте многих поколений, заботясь об океане и будущих поколениях.
+								</p>
+							</li>
+							<li class="first-slider__item">
+								<p class="first-slider__text">
+									Ежедневно во всем мире подают несколько миллионов норвежских блюд из морепродуктов.
+								</p>
+							</li>
+							<li class="first-slider__item">
+								<p class="first-slider__text">
+									Норвежские морепродукты уникальны, потому что они выращиваются экологически рациональным образом,
+									основываясь на знаниях и опыте многих поколений, заботясь об океане и будущих поколениях.
+								</p>
+							</li>
+							<li class="first-slider__item">
+								<p class="first-slider__text">
+									Норвежские морепродукты уникальны, потому что они выращиваются экологически рациональным образом,
+									основываясь на знаниях и опыте многих поколений, заботясь об океане и будущих поколениях. Норвежские
+									морепродукты уникальны, потому что они выращиваются экологически рациональным образом,
+									основываясь на знаниях и опыте многих поколений, заботясь об океане и будущих поколениях.
+								</p>
+							</li>
+						</ul>
+						<div class="first__btn-box">
 							<a href="#" class="first__btn">Выбрать</a>
-							<ul class="first__lang lang__list">
-								<li class="lang__item">
-									<a class="lang__link" href="#">
-										Ru
-									</a>
-									/
-									<a class="lang__link" href="#">
-										En
-									</a>
-								</li>
-							</ul>
+						</div>
+
+						<ul class="first__lang lang__list">
+							<li class="lang__item">
+								<a class="lang__link active" href="#">
+									Ru
+								</a>
+								/
+								<a class="lang__link" href="#">
+									En
+								</a>
+							</li>
 						</ul>
 					</div>
-				</div>
-				<div class="first__image --ibg">
-					<img src="img/first/cover.jpg" alt="Морепродукты 
-						из Норвегии">
 				</div>
 			</section>
 		</main>
 	</div>
 	<!-- SCRIPT -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/slick.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 

@@ -1,14 +1,10 @@
-$(function () {
-	$('.first-slider, .slider').slick({
-		dots: true,
-		arrows: false,
-		fade: true,
-		infinite: true,
-		autoplay: true,
-		autoplaySpeed: 2000,
-		draggable: true,
-	})
-})
+$('.first-slider').slick({
+	dots: true,
+	infinite: true,
+	fade: true,
+	prevArrow: '<button type="button" class="slick-prev"><img src="img/first/arrow-prev.svg" alt="Previos"></button>',
+	nextArrow: '<button type="button" class="slick-next"><img src="img/first/arrow-next.svg" alt="Next"></button>',
+});
 
 /*---Menu---*/
 const menuBtn = document.querySelector('.burger-btn');
