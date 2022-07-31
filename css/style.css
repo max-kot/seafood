@@ -530,7 +530,7 @@ body {
   font-weight: 700;
 }
 .product {
-  padding: 100px 0 36px;
+  padding: 100px 0 0;
 }
 @media (max-width: 768px) {
   .product {
@@ -738,4 +738,108 @@ body {
 }
 .slide-info__link-box {
   display: flex;
+}
+.benefit {
+  padding: 293px 0 95px;
+  background: url("../img/benefit/bg.png") center/cover no-repeat;
+}
+@media (max-width: 768px) {
+  .benefit {
+    padding: 0;
+  }
+}
+@media (max-width: 480px) {
+  .benefit {
+    margin-top: -300px;
+  }
+}
+.benefit__body {
+  padding: 0 90px;
+}
+@media (max-width: 1000px) {
+  .benefit__body {
+    padding: 0;
+  }
+}
+.benefit__list {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .benefit__list {
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    padding-top: 160px;
+    padding-bottom: 25px;
+  }
+}
+@media (max-width: 480px) {
+  .benefit__list {
+    padding-top: 400px;
+  }
+}
+.benefit__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  min-height: 165px;
+  background: url("../img/benefit/item-bg.png") center/cover no-repeat;
+}
+@media (max-width: 768px) {
+  .benefit__item {
+    flex: 0 1 180px;
+  }
+}
+.benefit__text {
+  max-width: 142px;
+  text-align: center;
+  color: #fff;
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 700;
+}
+
+.history {
+  padding: 100px 0;
+}
+.history__row {
+  display: flex;
+  justify-content: space-between;
+}
+.history__row + * {
+  margin-top: 50px;
+}
+.history__row-reverse {
+  flex-direction: row-reverse;
+}
+.history__row-reverse .history__content {
+  flex: 0 1 600px;
+}
+.history__row-reverse .history__content + * {
+  margin-left: 0px;
+  margin-right: 20px;
+}
+.history__row-reverse .history__image {
+  flex: 0 1 490px;
+}
+.history__content {
+  flex: 0 1 490px;
+}
+.history__content + * {
+  margin-left: 20px;
+}
+.history__descr + * {
+  margin-top: 50px;
+}
+.history__descr > * + * {
+  margin-top: 30px;
+}
+.history__text {
+  max-width: 420px;
+}
+.history__image {
+  flex: 0 1 600px;
+  min-height: 203px;
 }

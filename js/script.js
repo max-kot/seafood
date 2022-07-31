@@ -29,6 +29,7 @@ $(function () {
 				breakpoint: 1001,
 				settings: {
 					vertical: false,
+					swipe: false,
 				}
 			},
 		],
@@ -50,12 +51,15 @@ $(function () {
 				settings: {
 					vertical: false,
 					slidesToShow: 3,
-				},
+				}
+			},
+			{
 				breakpoint: 769,
 				settings: {
 					slidesToShow: 1,
 					vertical: false,
-				}
+				},
+
 			},
 		],
 	});
