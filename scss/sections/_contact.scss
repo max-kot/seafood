@@ -1,0 +1,34 @@
+.contact {
+	display: flex; //флексуем нащу секцию
+	&__image {
+		position: relative;
+		padding-bottom: 18.5%;
+		flex: 0 0 70%;
+	}
+
+	&__content {
+		transform: translateX(-50%);
+		flex: 0 0 100%; //увеличиваем на 100% весь блок с контентом
+	}
+
+	&__body {
+	}
+
+	&__title {
+	}
+
+	&__box {
+	}
+
+	&__text {
+	}
+
+	&__mail {
+	}
+
+	&__phone {
+	}
+
+	&__address {
+	}
+}

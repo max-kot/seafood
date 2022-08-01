@@ -1,0 +1,25 @@
+.quote {
+	padding-bottom: 100px;
+	@media (max-width: 768px) {
+		padding-bottom: 25px;
+	}
+	&__body {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	&__image {
+		position: relative;
+		padding-bottom: 38%;
+		img {
+			object-position: top;
+		}
+	}
+
+	&__text {
+		text-align: center;
+		font-family: "Roboto Slab";
+		font-size: 18px;
+		line-height: calc(24px / 18px * 100%);
+	}
+}

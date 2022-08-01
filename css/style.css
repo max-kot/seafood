@@ -804,22 +804,53 @@ body {
 .history {
   padding: 100px 0;
 }
+@media (max-width: 768px) {
+  .history {
+    padding: 25px 0;
+  }
+}
 .history__row {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 768px) {
+  .history__row {
+    flex-direction: column;
+  }
+}
 .history__row + * {
   margin-top: 50px;
+}
+@media (max-width: 768px) {
+  .history__row + * {
+    margin-top: 20px;
+  }
 }
 .history__row-reverse {
   flex-direction: row-reverse;
 }
+@media (max-width: 768px) {
+  .history__row-reverse {
+    flex-direction: column;
+  }
+}
 .history__row-reverse .history__content {
   flex: 0 1 600px;
+}
+@media (max-width: 768px) {
+  .history__row-reverse .history__content {
+    flex: 0 1 100%;
+  }
 }
 .history__row-reverse .history__content + * {
   margin-left: 0px;
   margin-right: 20px;
+}
+@media (max-width: 768px) {
+  .history__row-reverse .history__content + * {
+    margin-right: 0;
+    margin-top: 15px;
+  }
 }
 .history__row-reverse .history__image {
   flex: 0 1 490px;
@@ -827,19 +858,91 @@ body {
 .history__content {
   flex: 0 1 490px;
 }
+@media (max-width: 768px) {
+  .history__content {
+    flex: 0 1 100%;
+  }
+}
 .history__content + * {
   margin-left: 20px;
+}
+@media (max-width: 768px) {
+  .history__content + * {
+    margin-left: 0;
+    margin-top: 15px;
+  }
 }
 .history__descr + * {
   margin-top: 50px;
 }
+@media (max-width: 768px) {
+  .history__descr + * {
+    margin-top: 20px;
+  }
+}
 .history__descr > * + * {
   margin-top: 30px;
+}
+@media (max-width: 768px) {
+  .history__descr > * + * {
+    margin-top: 10px;
+  }
 }
 .history__text {
   max-width: 420px;
 }
+@media (max-width: 768px) {
+  .history__text {
+    max-width: 100%;
+  }
+}
 .history__image {
   flex: 0 1 600px;
   min-height: 203px;
+}
+@media (max-width: 768px) {
+  .history__image {
+    min-height: unset;
+    max-height: 200px;
+  }
+}
+
+.quote {
+  padding-bottom: 100px;
+}
+@media (max-width: 768px) {
+  .quote {
+    padding-bottom: 25px;
+  }
+}
+.quote__body {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.quote__image {
+  position: relative;
+  padding-bottom: 38%;
+}
+.quote__image img {
+  -o-object-position: top;
+     object-position: top;
+}
+.quote__text {
+  text-align: center;
+  font-family: "Roboto Slab";
+  font-size: 18px;
+  line-height: 133.3333333333%;
+}
+
+.contact {
+  display: flex;
+}
+.contact__image {
+  position: relative;
+  padding-bottom: 18.5%;
+  flex: 0 0 70%;
+}
+.contact__content {
+  transform: translateX(-50%);
+  flex: 0 0 100%;
 }
