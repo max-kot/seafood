@@ -1,23 +1,59 @@
 .contact {
-	display: flex; //флексуем нащу секцию
+	position: relative;
 	&__image {
-		position: relative;
-		padding-bottom: 18.5%;
-		flex: 0 0 70%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 35%;
+		height: 100%;
+		img {
+			object-position: bottom;
+		}
+		@media (min-width: 1920px) {
+			right: 40%;
+		}
+		@media (max-width: 768px) {
+			position: relative;
+			top: unset;
+			left: unset;
+			right: unset;
+			padding-bottom: 28%;
+		}
 	}
 
 	&__content {
-		transform: translateX(-50%);
-		flex: 0 0 100%; //увеличиваем на 100% весь блок с контентом
+		padding: 33px 0;
 	}
 
 	&__body {
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		flex-direction: column;
+		@media (max-width: 768px) {
+			align-items: center;
+		}
+	}
+	&__descr {
+		max-width: 30%;
+		& > * + * {
+			margin-top: 35px;
+			@media (max-width: 768px) {
+				margin-top: 15px;
+			}
+		}
+		@media (max-width: 768px) {
+			max-width: 100%;
+		}
 	}
 
 	&__title {
+		max-width: 300px;
 	}
 
 	&__box {
+		font-size: 18px;
+		line-height: calc(21px / 18px * 100%);
 	}
 
 	&__text {

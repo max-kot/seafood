@@ -69,7 +69,7 @@ $(function () {
 
 /*---Menu---*/
 const menuBtn = document.querySelector('.burger-btn');
-const menu = document.querySelector('.menu');
+const menu = document.querySelector('.header__menu');
 const body = document.querySelector('body');
 const menuLinks = document.querySelectorAll('.menu a')
 
@@ -85,4 +85,14 @@ menuLinks.forEach(function (link) {
 		body.classList.remove('no-scroll');
 		menuBtn.classList.remove('active');
 	})
+})
+
+/*---Footer Menu---*/
+const footerMenuBtn = document.querySelector('.menu-btn');
+const footerMenu = document.querySelector('.footer__menu');
+
+footerMenuBtn.addEventListener('click', function () {
+	footerMenu.classList.toggle('active');
+	footerMenuBtn.classList.toggle('active');
+
 })

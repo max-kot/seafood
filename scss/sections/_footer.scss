@@ -1,0 +1,129 @@
+.footer {
+	padding: 30px 0 109px;
+	@media (max-width: 1000px) {
+		padding: 25px 0;
+		border-top: 3px solid #001e64;
+	}
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		@media (max-width: 1000px) {
+			flex-direction: column;
+			align-items: center;
+		}
+		& > * + * {
+			margin-left: 15px;
+			@media (max-width: 1000px) {
+				margin-left: unset;
+				margin-top: 15px;
+			}
+		}
+	}
+
+	&__social {
+		padding-top: 64px;
+		@media (max-width: 1000px) {
+			padding-top: 0;
+		}
+	}
+	&__menu-btn {
+		display: none;
+		font-family: "Roboto Slab";
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 133%;
+		text-transform: uppercase;
+		background: #001e64;
+		color: #fff;
+		padding: 15px;
+		width: 100%;
+		position: relative;
+		@media (max-width: 1000px) {
+			display: block;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 15px;
+			transform: translateY(-50%);
+			width: 35px;
+			height: 3px;
+			background: #fff;
+			transition: transform 0.3s;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 15px;
+			transform: translateY(-50%);
+			transform: rotate(90deg);
+			width: 35px;
+			height: 3px;
+			background: #fff;
+			transition: transform 0.3s;
+		}
+		&.active::before {
+			transform: rotate(-45deg);
+		}
+		&.active::after {
+			transform: rotate(45deg);
+		}
+	}
+	&__menu {
+		padding-top: 74px;
+		@media (max-width: 1000px) {
+			padding-top: 0;
+			display: none;
+			&.active {
+				display: flex;
+			}
+		}
+		& .menu__list {
+			flex-wrap: wrap;
+		}
+		& .menu__link {
+			color: #232222;
+			&:hover {
+				color: #001e64;
+			}
+		}
+	}
+
+	&__logo {
+	}
+}
+.social {
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	&__item {
+	}
+
+	&__link {
+		& path {
+			transition: all 0.3s;
+		}
+		&:hover path {
+			fill: #001e64;
+		}
+	}
+}
+.menu {
+	&__list {
+	}
+
+	&__item {
+	}
+
+	&__link {
+	}
+}
+.logo {
+	&__img {
+	}
+}
